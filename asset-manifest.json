@@ -1,14 +1,14 @@
 {
-  "main.css": "/quick_points/static/css/main.691a2f22.chunk.css",
-  "main.js": "/quick_points/static/js/main.2da457b1.chunk.js",
-  "main.js.map": "/quick_points/static/js/main.2da457b1.chunk.js.map",
-  "static/js/1.bc29c928.chunk.js": "/quick_points/static/js/1.bc29c928.chunk.js",
-  "static/js/1.bc29c928.chunk.js.map": "/quick_points/static/js/1.bc29c928.chunk.js.map",
+  "main.css": "/quick_points/static/css/main.48e7b4ff.chunk.css",
+  "main.js": "/quick_points/static/js/main.2f26937c.chunk.js",
+  "main.js.map": "/quick_points/static/js/main.2f26937c.chunk.js.map",
+  "static/js/1.5760c26f.chunk.js": "/quick_points/static/js/1.5760c26f.chunk.js",
+  "static/js/1.5760c26f.chunk.js.map": "/quick_points/static/js/1.5760c26f.chunk.js.map",
   "runtime~main.js": "/quick_points/static/js/runtime~main.68aa5a17.js",
   "runtime~main.js.map": "/quick_points/static/js/runtime~main.68aa5a17.js.map",
   "static/media/logo.png": "/quick_points/static/media/logo.1962f440.png",
-  "static/css/main.691a2f22.chunk.css.map": "/quick_points/static/css/main.691a2f22.chunk.css.map",
+  "static/css/main.48e7b4ff.chunk.css.map": "/quick_points/static/css/main.48e7b4ff.chunk.css.map",
   "index.html": "/quick_points/index.html",
-  "precache-manifest.16b5e2d5b5815b97abb8cb642f7cb5ed.js": "/quick_points/precache-manifest.16b5e2d5b5815b97abb8cb642f7cb5ed.js",
+  "precache-manifest.63c776e94a6e44f3031eb5e01ca421b5.js": "/quick_points/precache-manifest.63c776e94a6e44f3031eb5e01ca421b5.js",
   "service-worker.js": "/quick_points/service-worker.js"
 }
