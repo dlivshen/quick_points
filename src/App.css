@@ -1,0 +1,17 @@
+.app-global {
+    margin: 10px 10px 10px 10px;
+}
+
+.main-grid {
+    margin-top: 10px;
+}
+
+.main-header {
+    text-align: center;
+}
+
+.main-logo {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
