@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Label, Col } from 'react-bootstrap';
 
 /**
@@ -6,12 +7,12 @@ import { Label, Col } from 'react-bootstrap';
  * @param props
  *          - value - The value to display
  */
-function ResultPane(props) {
-    if (isNaN(parseFloat(props.value))) {
+function ResultPane({resultValue}) {
+    if (isNaN(parseFloat(resultValue))) {
         return null;
     }
 
-    const value = props.value;
+    const value = resultValue;
     const amount = value === 1 ? "point" : "points";
     let bs_style = "success";
     if (value > 5) {
@@ -31,5 +32,9 @@ function ResultPane(props) {
         </Col>
     );
 }
+
+ResultPane.propTypes = {
+    resultValue: PropTypes.number
+};
 
 export default ResultPane;
