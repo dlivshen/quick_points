@@ -1,9 +1,12 @@
 import React from 'react';
-import Fields from '../containers/Fields';
-import Result from '../containers/Result'
 import { Panel, Image} from 'react-bootstrap';
 import '../App.css';
 import logo from '../logo.png';
+
+import Fields from '../containers/Fields';
+import Result from '../containers/Result'
+import AddSavedItem from '../containers/AddSavedItem'
+import SavedItems from '../containers/SavedItems'
 
 const App = () => (
     <Panel bsStyle="info" className="app-global">
@@ -14,6 +17,8 @@ const App = () => (
         </Panel.Heading>
         <Fields />
         <Result />
+        <AddSavedItem />
+        <SavedItems />
     </Panel>
 );
 

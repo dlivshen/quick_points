@@ -1,21 +1,15 @@
 import { connect } from 'react-redux'
 import Result from '../components/Result'
+import { calculatePointsValue } from "../logic/PointsCalculations";
 
 const calculateValue = (fields) => {
-    const fat = parseFloat(fields.fat.value);
-    const carb = parseFloat(fields.carb.value);
-    const prot = parseFloat(fields.prot.value);
-    const fiber = parseFloat(fields.fiber.value);
-
-    // Calculate the result according to the formula
-    let result = (fat*0.2571429) + (carb*0.1085714) + (prot*0.0914286) - (fiber*0.08);
-
-    // Make sure that the result does make logic
-    result = Math.max(result, 0);
-    result = Math.min(result, 100);
-
-    return Math.round(result);
-}
+    return calculatePointsValue(
+        fields.fat.value,
+        fields.carb.value,
+        fields.prot.value,
+        fields.fiber.value
+    );
+};
 
 const mapStateToProps = state => ({
     resultValue: calculateValue(state.fields)

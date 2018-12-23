@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { valueChange } from '../actions';
+import { valueChange } from '../actions/fields';
 import Fields from '../components/Fields'
 
 

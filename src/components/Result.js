@@ -23,7 +23,7 @@ function ResultPane({resultValue}) {
     }
 
     return (
-        <Col xsOffset={4}>
+        <Col xsOffset={4} className="popper">
             <h1>
                 <Label bsStyle={bs_style}>
                     {value} {amount}
