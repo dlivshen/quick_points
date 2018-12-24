@@ -6,3 +6,13 @@ export const addItem = (name, fatValue, carbValue, protValue, fiberValue) => ({
     protValue,
     fiberValue,
 });
+
+export const removeItem = (name) => ({
+    type: 'REMOVE_SAVE_ITEM',
+    name
+});
+
+export const setSelected = (name) => ({
+    type: 'SET_SELECTED_ITEM',
+    name
+});

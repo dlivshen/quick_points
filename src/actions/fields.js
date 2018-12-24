@@ -3,3 +3,11 @@ export const valueChange = (id, newValue) => ({
     id: id,
     value: newValue
 });
+
+export const setValues = (fat, carb, prot, fiber) => ({
+    type: 'SET_VALUES',
+    fat,
+    carb,
+    prot,
+    fiber
+});

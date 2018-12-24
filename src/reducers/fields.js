@@ -23,14 +23,21 @@ const initialState = {
 
 
 const fields = (state = initialState, action) => {
+    let new_fields = {};
     switch (action.type) {
         case 'VALUE_CHANGE':
-            let new_fields = {};
-            for (var field of ['fat', 'carb', 'prot', 'fiber']) {
+            console.log("fuckme");
+            for (let field of ['fat', 'carb', 'prot', 'fiber']) {
                 new_fields[field] = state[field];
                 if (action.id === field) {
                     new_fields[field].value = action.value
                 }
+            }
+            return new_fields;
+        case 'SET_VALUES':
+            for (let field of ['fat', 'carb', 'prot', 'fiber']) {
+                new_fields[field] = state[field];
+                new_fields[field].value = action[field]
             }
             return new_fields;
         default:

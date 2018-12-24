@@ -3,8 +3,11 @@ import { connect } from 'react-redux';
 import { Grid, ListGroup } from 'react-bootstrap';
 
 import SavedItem from '../components/SavedItem'
+import { removeItem, setSelected } from '../actions/savedItems'
+import { setValues } from "../actions/fields";
+import {chain} from "redux-chain";
 
-const SavedItems = ({savedItems}) => {
+const SavedItems = ({onSelect, onRemove, savedItems}) => {
     if (savedItems === undefined || savedItems.length === 0) {
         return null;
     }
@@ -17,8 +20,9 @@ const SavedItems = ({savedItems}) => {
         {savedItems.map(savedItem =>
             <SavedItem
                 key={savedItem.id}
-                itemName={savedItem.text}
-                points={savedItem.points}
+                item={savedItem}
+                onRemove={itemName => onRemove(itemName)}
+                onSelect={item => onSelect(item)}
             />
         )}
         </ListGroup>
@@ -26,8 +30,16 @@ const SavedItems = ({savedItems}) => {
     );
 };
 
+const mapDispatchToProps = dispatch => ({
+    onRemove: itemName => dispatch(removeItem(itemName)),
+    onSelect: item => dispatch(chain(
+        setValues(item.fatValue, item.carbValue, item.protValue, item.fiberValue),
+        setSelected(item.id)
+    ))
+});
+
 const mapStateToProps = state => ({
     savedItems: state.savedItems
 });
 
-export default connect (mapStateToProps) (SavedItems);
+export default connect (mapStateToProps, mapDispatchToProps) (SavedItems);

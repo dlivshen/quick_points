@@ -14,9 +14,17 @@ const savedItems = (state = initialState, action) => {
                     carbValue: action.carbValue,
                     protValue: action.protValue,
                     fiberValue: action.fiberValue,
-                    points: calculatePointsValue(action.fatValue, action.carbValue, action.protValue, action.fiberValue)
+                    points: calculatePointsValue(action.fatValue, action.carbValue, action.protValue, action.fiberValue),
+                    isSelected: true
                 }
             ];
+        case 'REMOVE_SAVE_ITEM':
+            return state.filter(t => t.id !== action.name)
+        case 'SET_SELECTED_ITEM':
+            console.log("curr selected is: " + action.name)
+            return state.map(item => (
+                (item.id === action.name) ? {...item, isSelected: true} : {...item, isSelected: false}
+            ));
         default:
             return state;
     }
